@@ -1,0 +1,53 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+body {
+  font-family: "Roboto", sans-serif; /* Apply Roboto as the font */
+  margin: 0; /* Optional: Reset margin */
+  padding: 0; /* Optional: Reset padding */
+}
+
+button {
+  padding: 10px 10px;
+  background-color: #320075;
+  color: #fff;
+  border-radius: 50px;
+  border: 0px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+/* Style the table */
+.striped-table {
+  width: 100%;
+  border-collapse: collapse;
+
+  border-radius: 8px; /* Rounded corners for the table */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow around the table */
+}
+
+/* Style table header */
+.striped-table thead {
+  background-color: #fd02a3; /* Blue background */
+  color: white; /* White text */
+}
+
+/* Style for header and table data */
+.striped-table th,
+.striped-table td {
+  padding: 6px 12px; /* Adds padding inside the cells */
+  text-align: left;
+}
+
+/* Style for alternating row colors */
+.striped-table tbody tr:nth-child(odd) {
+  background-color: #f9f9f9; /* Light background for odd rows */
+}
+
+.striped-table tbody tr:nth-child(even) {
+  background-color: #f1f1f1; /* Slightly darker for even rows */
+}
+
+/* Hover effect */
+.striped-table tbody tr:hover {
+  background-color: #f4f4f4; /* Light gray on hover */
+}
