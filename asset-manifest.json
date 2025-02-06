@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/JammyJamm/Vella/static/css/main.5bee5071.css",
-    "main.js": "/JammyJamm/Vella/static/js/main.d0873914.js",
+    "main.js": "/JammyJamm/Vella/static/js/main.838a90f1.js",
     "static/js/488.ba88c2f8.chunk.js": "/JammyJamm/Vella/static/js/488.ba88c2f8.chunk.js",
     "static/media/logo.svg": "/JammyJamm/Vella/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/JammyJamm/Vella/index.html",
     "main.5bee5071.css.map": "/JammyJamm/Vella/static/css/main.5bee5071.css.map",
-    "main.d0873914.js.map": "/JammyJamm/Vella/static/js/main.d0873914.js.map",
+    "main.838a90f1.js.map": "/JammyJamm/Vella/static/js/main.838a90f1.js.map",
     "488.ba88c2f8.chunk.js.map": "/JammyJamm/Vella/static/js/488.ba88c2f8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5bee5071.css",
-    "static/js/main.d0873914.js"
+    "static/js/main.838a90f1.js"
   ]
 }
