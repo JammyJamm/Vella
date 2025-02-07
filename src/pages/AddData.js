@@ -1,6 +1,33 @@
+import { addDoc, collection } from "firebase/firestore";
 import { Link } from "react-router-dom";
+import db from "./FirbaseConfig";
 
 const AddData = () => {
+  const handleLadduAddMatch = (e) => {
+    e.preventDefault();
+    const addForm = document.querySelector("#addLadduData");
+
+    const colRef = collection(db, "Laddu");
+    addDoc(colRef, {
+      league: addForm.league.value,
+      player1Score: addForm.player1Score.value,
+      player2Score: addForm.player2Score.value,
+      player1Name: addForm.player1Name.value,
+      player2Name: addForm.player2Name.value,
+      player1Role: addForm.player1Role.value,
+      player2Role: addForm.player2Role.value,
+      totalScore: addForm.totalScore.value,
+    })
+      .then((response) => {
+        alert("Added");
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  };
+  const handleChange = (e) => {
+    return e.target.value;
+  };
   return (
     <div className="Add-layout">
       {/* Nav Bar Starts */}
@@ -24,9 +51,26 @@ const AddData = () => {
             </Link>
           </div>
         </div>
-        <ul>
-          <li></li>
-        </ul>
+        <div className="main">
+          <div className="main-content">
+            <form
+              id="addLadduData"
+              onSubmit={handleLadduAddMatch}
+              className="row"
+            >
+              <div className="col-6 col-sm-6 col-md-4">
+                <label className="form-label">Player1 Name</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  name="player1Name"
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+            </form>
+          </div>
+        </div>
       </nav>
     </div>
   );
