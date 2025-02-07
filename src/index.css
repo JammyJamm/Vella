@@ -275,7 +275,7 @@ table tbody tr.loss {
 
   background-size: 101% auto;
   color: #fff;
-  padding: 6px 46px 0px 10px;
+  padding: 6px 10px 0px 10px;
   background-position: bottom;
 }
 .ui-topNav .image {
@@ -307,7 +307,8 @@ table tbody tr.loss {
   white-space: nowrap;
 }
 .ui-topNav .game button {
-  margin-bottom: 6px;
+  border-bottom: 3px solid transparent;
+  margin-bottom: 3px;
 }
 .ui-topNav .game label {
   padding: 12px 10px;

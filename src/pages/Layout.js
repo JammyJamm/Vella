@@ -5,6 +5,10 @@ import { collection, getDocs, query } from "firebase/firestore";
 import db from "./FirbaseConfig";
 const Layout = () => {
   const [data, setData] = useState([]);
+  const [player, setPlayer] = useState("batter");
+  const [score, setScore] = useState("00");
+  const [filterData, setFilterData] = useState([]);
+
   const userData = async () => {
     const q = query(collection(db, "Laddu"));
     const querySnapshot = await getDocs(q);
@@ -21,7 +25,51 @@ const Layout = () => {
   useEffect(() => {
     userData();
   }, []);
-
+  useEffect(() => {
+    switch (score) {
+      case "00":
+        setFilterData(
+          data?.filter((item) => {
+            return (
+              parseInt(item.player1Score) == 0 &&
+              parseInt(item.player2Score) == 0
+            );
+          })
+        );
+        console.log(score);
+        break;
+      case "01":
+        setFilterData(
+          data?.filter((item) => {
+            return (
+              parseInt(item.player1Score) >= 1 &&
+              parseInt(item.player1Score) < 10 &&
+              parseInt(item.player2Score) >= 1 &&
+              parseInt(item.player2Score) < 10
+            );
+          })
+        );
+        break;
+      case "02":
+        setFilterData(
+          data?.filter((item) => {
+            return (
+              parseInt(item.player1Score) >= 10 &&
+              parseInt(item.player1Score) < 20 &&
+              parseInt(item.player2Score) >= 10 &&
+              parseInt(item.player2Score) < 20
+            );
+          })
+        );
+        break;
+      default:
+        break;
+    }
+  }, [data, score]);
+  // Handle Score
+  const handleScore = (prop) => {
+    setScore(prop);
+  };
   return (
     <div className="layout">
       {/* Nav Bar Starts */}
@@ -65,13 +113,22 @@ const Layout = () => {
           </div>
           <div className="gameBlock">
             <div className="game">
-              <button value="00" className="">
+              <button
+                onClick={() => handleScore("00")}
+                className={score == "00" ? "selected" : ""}
+              >
                 0,0
               </button>
-              <button value="01" className="">
+              <button
+                onClick={() => handleScore("01")}
+                className={score == "01" ? "selected" : ""}
+              >
                 0,1-9
               </button>
-              <button value="010" className="">
+              <button
+                onClick={() => handleScore("02")}
+                className={score == "02" ? "selected" : ""}
+              >
                 0,10-20
               </button>
               <button value="020" className="">
@@ -281,7 +338,7 @@ const Layout = () => {
           </p>
           {/* Main Card Starts */}
           <div className="main-card col-12 ui-player-table">
-            {data.map((list) => {
+            {filterData?.map((list) => {
               return (
                 <div className="card">
                   <div className="middle">
