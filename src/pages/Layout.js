@@ -281,22 +281,65 @@ const Layout = () => {
           </p>
           {/* Main Card Starts */}
           <div className="main-card col-12 ui-player-table">
-            <div className="card Win">
-              <div className="middle">
-                <label>Shanbaz Ahmed </label>
-                <label className="result">
-                  <span className="green">First</span>
-                </label>
-                <label>22</label>
-              </div>
-              <div className="bottom">
-                <label className="state">
-                  <i className="note">All-6</i>
-                </label>
-                <label>SRH / GT , 2024</label>
-                <label></label>
-              </div>
-            </div>
+            {data.map((list) => {
+              return (
+                <div className="card">
+                  <div className="middle">
+                    <label style={{ display: "flex", flexDirection: "column" }}>
+                      <span>{list.player1Score}</span>
+                      <b
+                        style={{
+                          fontWeight: "500",
+                          color: " rgba(65, 65, 65, 0.6)",
+                        }}
+                      >
+                        {list.player1Name}
+                      </b>
+                    </label>
+                    <label className="result">
+                      {list.result
+                        .trim()
+                        .split(",")
+                        .map((score) => {
+                          return (
+                            <span class="blue" style={{ marginRight: "2px" }}>
+                              {score}
+                            </span>
+                          );
+                        })}
+
+                      {/* <span className="green">First</span> */}
+                    </label>
+                    <label
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        textAlign: "right",
+                      }}
+                    >
+                      <span>{list.player2Score}</span>
+                      <b
+                        style={{
+                          fontWeight: "500",
+                          color: " rgba(65, 65, 65, 0.6)",
+                        }}
+                      >
+                        {list.player2Name}
+                      </b>
+                    </label>
+                  </div>
+                  {/* <div className="bottom">
+                    <label className="state">
+                      <i className="note">{list.player1Score}</i>
+                    </label>
+                    <label>{list.result}</label>
+                    <label className="state">
+                      <i className="note">{list.player2Score}</i>
+                    </label>
+                  </div> */}
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

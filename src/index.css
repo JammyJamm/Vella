@@ -300,10 +300,14 @@ table tbody tr.loss {
 }
 .ui-topNav .game {
   width: 116%;
+  margin-bottom: 1px;
   overflow-y: hidden;
   overflow-x: auto;
   transform-origin: right top;
   white-space: nowrap;
+}
+.ui-topNav .game button {
+  margin-bottom: 6px;
 }
 .ui-topNav .game label {
   padding: 12px 10px;
