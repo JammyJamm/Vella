@@ -5,8 +5,8 @@ import { collection, getDocs, query } from "firebase/firestore";
 import db from "./FirbaseConfig";
 const Layout = () => {
   const [data, setData] = useState([]);
-  const [player, setPlayer] = useState("batter");
-  const [score, setScore] = useState("00");
+  const [player, setPlayer] = useState("Player,Player");
+  const [score, setScore] = useState("0,0,0,0");
   const [filterData, setFilterData] = useState([]);
 
   const userData = async () => {
@@ -26,49 +26,36 @@ const Layout = () => {
     userData();
   }, []);
   useEffect(() => {
-    switch (score) {
-      case "00":
-        setFilterData(
-          data?.filter((item) => {
-            return (
-              parseInt(item.player1Score) == 0 &&
-              parseInt(item.player2Score) == 0
-            );
-          })
+    const arrScore = score.split(",");
+    const arrPLayer = player.split(",");
+    console.log(arrScore);
+    const arrScore1 = parseInt(arrScore[0]);
+    const arrScore2 = parseInt(arrScore[1]);
+    const arrScore3 = parseInt(arrScore[2]);
+    const arrScore4 = parseInt(arrScore[3]);
+    const player1 = arrPLayer[0].toUpperCase();
+    const player2 = arrPLayer[1].toUpperCase();
+    setFilterData(
+      data?.filter((item) => {
+        return (
+          parseInt(item.player1Score) >= arrScore1 &&
+          parseInt(item.player1Score) <= arrScore2 &&
+          parseInt(item.player2Score) >= arrScore3 &&
+          parseInt(item.player2Score) <= arrScore4 &&
+          ((item.player1Role.toUpperCase() == player1 &&
+            item.player2Role.toUpperCase() == player2) ||
+            (item.player1Role.toUpperCase() == player2 &&
+              item.player2Role.toUpperCase() == player1))
         );
-        console.log(score);
-        break;
-      case "01":
-        setFilterData(
-          data?.filter((item) => {
-            return (
-              parseInt(item.player1Score) >= 1 &&
-              parseInt(item.player1Score) < 10 &&
-              parseInt(item.player2Score) >= 1 &&
-              parseInt(item.player2Score) < 10
-            );
-          })
-        );
-        break;
-      case "02":
-        setFilterData(
-          data?.filter((item) => {
-            return (
-              parseInt(item.player1Score) >= 10 &&
-              parseInt(item.player1Score) < 20 &&
-              parseInt(item.player2Score) >= 10 &&
-              parseInt(item.player2Score) < 20
-            );
-          })
-        );
-        break;
-      default:
-        break;
-    }
-  }, [data, score]);
+      })
+    );
+  }, [data, score, player]);
   // Handle Score
   const handleScore = (prop) => {
     setScore(prop);
+  };
+  const handlePlayer = (prop) => {
+    setPlayer(prop);
   };
   return (
     <div className="layout">
@@ -114,35 +101,48 @@ const Layout = () => {
           <div className="gameBlock">
             <div className="game">
               <button
-                onClick={() => handleScore("00")}
-                className={score == "00" ? "selected" : ""}
+                onClick={() => handleScore("0,0,0,0")}
+                className={score == "0,0,0,0" ? "selected" : ""}
               >
-                0,0
+                0-0 | 0-0
               </button>
               <button
-                onClick={() => handleScore("01")}
-                className={score == "01" ? "selected" : ""}
+                onClick={() => handleScore("0,0,1,9")}
+                className={score == "0,0,1,9" ? "selected" : ""}
               >
-                0,1-9
+                0-0 | 1-9
               </button>
               <button
-                onClick={() => handleScore("02")}
-                className={score == "02" ? "selected" : ""}
+                onClick={() => handleScore("0,0,10,19")}
+                className={score == "0,0,10,19" ? "selected" : ""}
               >
-                0,10-20
+                0-0 | 10-19
               </button>
-              <button value="020" className="">
-                0,20-30
+              <button
+                onClick={() => handleScore("0,0,20,29")}
+                className={score == "0,0,20,29" ? "selected" : ""}
+              >
+                0-0 | 20-29
               </button>
-              <button value="030" className="">
-                0,30-40
+              <button
+                onClick={() => handleScore("0,0,30,39")}
+                className={score == "0,0,30,39" ? "selected" : ""}
+              >
+                0-0 | 30-39
               </button>
-              <button value="040" className="">
-                0,40-50
+              <button
+                onClick={() => handleScore("0,0,40,49")}
+                className={score == "0,0,40,49" ? "selected" : ""}
+              >
+                0-0 | 40-49
               </button>
-              <button value="050" className="">
-                0,Above 50
+              <button
+                onClick={() => handleScore("0,0,50,59")}
+                className={score == "0,0,50,59" ? "selected" : ""}
+              >
+                0-0 | 50-59
               </button>
+
               {/* 1 to someting */}
               <button value="11" className="">
                 1,1-9
@@ -186,7 +186,10 @@ const Layout = () => {
 
       <div className="ui-nav">
         <div className="ui-block">
-          <button className="selected">
+          <button
+            className={player == "Player,Player" ? "selected" : ""}
+            onClick={() => handlePlayer("Player,Player")}
+          >
             <svg
               width="512"
               height="512"
@@ -228,7 +231,10 @@ const Layout = () => {
             </svg>
             <span>Player</span>
           </button>
-          <button className="">
+          <button
+            className={player == "Player,Wk" ? "selected" : ""}
+            onClick={() => handlePlayer("Player,Wk")}
+          >
             <svg
               width="512"
               height="512"
@@ -247,7 +253,10 @@ const Layout = () => {
             </svg>
             <span>Keeper</span>
           </button>
-          <button className="">
+          <button
+            className={player == "Player,Captain" ? "selected" : ""}
+            onClick={() => handlePlayer("Player,Captain")}
+          >
             <svg
               width="513"
               height="512"
@@ -278,7 +287,10 @@ const Layout = () => {
             </svg>
             <span>Captain</span>
           </button>
-          <button className="">
+          <button
+            className={player == "Wk,Captain" ? "selected" : ""}
+            onClick={() => handlePlayer("Wk,Captain")}
+          >
             <svg
               width="513"
               height="512"
