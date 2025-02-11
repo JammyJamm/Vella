@@ -5,7 +5,7 @@ html {
   box-sizing: border-box;
 }
 html {
-  background-color: #fff;
+  background-color: #9b2e26;
 }
 
 body {
@@ -15,10 +15,12 @@ body {
   font-size: 12px !important;
   font-weight: 400; /* Regular weight */
   color: black;
-  background-color: #fff;
+  background-color: #9b2e26;
 }
 .main {
+  height: 100vh;
   padding: 1rem;
+  background-color: #fff;
 }
 h1 {
   font-weight: 800;
