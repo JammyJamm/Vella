@@ -633,8 +633,8 @@ table tbody tr.loss {
   font-weight: 700;
 }
 .main-card .card .middle .result {
-  /* display: flex;
-  flex-direction: column; */
+  display: flex;
+  flex-wrap: wrap;
   text-align: center;
 }
 .main-card .card .middle .result label {

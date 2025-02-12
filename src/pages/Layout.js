@@ -627,7 +627,7 @@ const Layout = () => {
                           return (
                             <span
                               className="blue"
-                              style={{ marginRight: "2px" }}
+                              style={{ margin: "0px 2px 2px 0px" }}
                             >
                               {score}
                             </span>
