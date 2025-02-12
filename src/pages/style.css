@@ -32,7 +32,7 @@ button.run {
   transition: all 0.6s;
 }
 .gameBlock .game {
-  height: 80vh;
+  height: 65vh;
   padding: 0px 6px;
   display: flex;
   flex-wrap: wrap;
