@@ -259,85 +259,320 @@ const Layout = () => {
         </div>
 
         <div className="game">
-          <button
-            onClick={() => handleScore("0,0,0,0")}
-            className={score == "0,0,0,0" ? "selected" : ""}
-          >
-            0-0 | 0-0
-          </button>
-          <button
-            onClick={() => handleScore("0,0,1,9")}
-            className={score == "0,0,1,9" ? "selected" : ""}
-          >
-            0-0 | 1-9
-          </button>
-          <button
-            onClick={() => handleScore("0,0,10,19")}
-            className={score == "0,0,10,19" ? "selected" : ""}
-          >
-            0-0 | 10-19
-          </button>
-          <button
-            onClick={() => handleScore("0,0,20,29")}
-            className={score == "0,0,20,29" ? "selected" : ""}
-          >
-            0-0 | 20-29
-          </button>
-          <button
-            onClick={() => handleScore("0,0,30,39")}
-            className={score == "0,0,30,39" ? "selected" : ""}
-          >
-            0-0 | 30-39
-          </button>
-          <button
-            onClick={() => handleScore("0,0,40,49")}
-            className={score == "0,0,40,49" ? "selected" : ""}
-          >
-            0-0 | 40-49
-          </button>
-          <button
-            onClick={() => handleScore("0,0,50,59")}
-            className={score == "0,0,50,59" ? "selected" : ""}
-          >
-            0-0 | 50-59
-          </button>
-
-          {/* 1 to someting */}
-          <button value="11" className="">
-            1,1-9
-          </button>
-          <button value="110" className="">
-            1,10-20
-          </button>
-          <button value="120" className="">
-            1,20-30
-          </button>
-          <button value="130" className="">
-            1,30-40
-          </button>
-          <button value="140" className="">
-            1,40-50
-          </button>
-          <button value="150" className="">
-            1,Above 50
-          </button>
+          <div className="card">
+            <button
+              onClick={() => handleScore("0,0,0,0")}
+              className={score == "0,0,0,0" ? "selected" : ""}
+            >
+              0-0 | 0-0
+            </button>
+            <button
+              onClick={() => handleScore("0,0,1,9")}
+              className={score == "0,0,1,9" ? "selected" : ""}
+            >
+              0-0 | 1-9
+            </button>
+            <button
+              onClick={() => handleScore("0,0,10,19")}
+              className={score == "0,0,10,19" ? "selected" : ""}
+            >
+              0-0 | 10-19
+            </button>
+            <button
+              onClick={() => handleScore("0,0,20,29")}
+              className={score == "0,0,20,29" ? "selected" : ""}
+            >
+              0-0 | 20-29
+            </button>
+            <button
+              onClick={() => handleScore("0,0,30,39")}
+              className={score == "0,0,30,39" ? "selected" : ""}
+            >
+              0-0 | 30-39
+            </button>
+            <button
+              onClick={() => handleScore("0,0,40,49")}
+              className={score == "0,0,40,49" ? "selected" : ""}
+            >
+              0-0 | 40-49
+            </button>
+            <button
+              onClick={() => handleScore("0,0,50,59")}
+              className={score == "0,0,50,59" ? "selected" : ""}
+            >
+              0-0 | 50-59
+            </button>
+            <button
+              onClick={() => handleScore("0,0,60,69")}
+              className={score == "0,0,60,69" ? "selected" : ""}
+            >
+              0-0 | 60-69
+            </button>
+            <button
+              onClick={() => handleScore("0,0,50,59")}
+              className={score == "0,0,70,79" ? "selected" : ""}
+            >
+              0-0 | 70-79
+            </button>
+            <button
+              onClick={() => handleScore("0,0,80,89")}
+              className={score == "0,0,80,89" ? "selected" : ""}
+            >
+              0-0 | 80-89
+            </button>
+            <button
+              onClick={() => handleScore("0,0,90,99")}
+              className={score == "0,0,90,99" ? "selected" : ""}
+            >
+              0-0 | 90-99
+            </button>
+            <button
+              onClick={() => handleScore("0,0,50,59")}
+              className={score == "0,0,50,59" ? "selected" : ""}
+            >
+              0-0 | 100-150
+            </button>
+          </div>
+          {/* 1 to 9 someting */}
+          <div className="card">
+            <button
+              onClick={() => handleScore("1,9,1,9")}
+              className={score == "1,9,1,9" ? "selected" : ""}
+            >
+              1-9 | 1-9
+            </button>
+            <button
+              onClick={() => handleScore("1,9,11,19")}
+              className={score == "1,9,11,19" ? "selected" : ""}
+            >
+              1-9 | 10-19
+            </button>
+            <button
+              onClick={() => handleScore("1,9,21,29")}
+              className={score == "1,9,21,29" ? "selected" : ""}
+            >
+              1-9 | 20-29
+            </button>
+            <button
+              onClick={() => handleScore("1,9,30,39")}
+              className={score == "1,9,30,39" ? "selected" : ""}
+            >
+              1-9 | 30-39
+            </button>
+            <button
+              onClick={() => handleScore("1,9,40,49")}
+              className={score == "1,9,40,49" ? "selected" : ""}
+            >
+              1-9 | 40-49
+            </button>
+            <button
+              onClick={() => handleScore("1,9,50,59")}
+              className={score == "1,9,50,59" ? "selected" : ""}
+            >
+              1-9 | 50-59
+            </button>
+            <button
+              onClick={() => handleScore("1,9,60,69")}
+              className={score == "1,9,60,69" ? "selected" : ""}
+            >
+              1-9 | 60-69
+            </button>
+            <button
+              onClick={() => handleScore("1,9,70,79")}
+              className={score == "1,9,70,79" ? "selected" : ""}
+            >
+              1-9 | 70-79
+            </button>
+            <button
+              onClick={() => handleScore("1,9,80,89")}
+              className={score == "1,9,80,89" ? "selected" : ""}
+            >
+              1-9 | 80-89
+            </button>
+            <button
+              onClick={() => handleScore("1,9,90,99")}
+              className={score == "1,9,90,99" ? "selected" : ""}
+            >
+              1-9 | 90-99
+            </button>
+            <button
+              onClick={() => handleScore("1,9,100,150")}
+              className={score == "1,9,100,150" ? "selected" : ""}
+            >
+              1-9 | 100-150
+            </button>
+          </div>
           {/* 10 to someting */}
-
-          <button value="1010" className="">
-            10,10-20
-          </button>
-          <button value="1020" className="">
-            10,20-30
-          </button>
-          <button value="1030" className="">
-            10,30-40
-          </button>
-          <button value="1040" className="">
-            10,40-50
-          </button>
-          <button value="1050" className="">
-            10,Above 50
-          </button>
+          <div className="card">
+            <button
+              onClick={() => handleScore("10,19,10,19")}
+              className={score == "10,19,10,19" ? "selected" : ""}
+            >
+              10-19 | 10-19
+            </button>
+            <button
+              onClick={() => handleScore("10,19,20,29")}
+              className={score == "10,19,20,29" ? "selected" : ""}
+            >
+              10-19 | 20-29
+            </button>
+            <button
+              onClick={() => handleScore("10,19,30,39")}
+              className={score == "10,19,30,39" ? "selected" : ""}
+            >
+              10-19 | 30-39
+            </button>
+            <button
+              onClick={() => handleScore("10,19,40,49")}
+              className={score == "10,19,40,49" ? "selected" : ""}
+            >
+              10-19 | 40-49
+            </button>
+            <button
+              onClick={() => handleScore("10,19,50,59")}
+              className={score == "10,19,50,59" ? "selected" : ""}
+            >
+              10-19 | 50-59
+            </button>
+            <button
+              onClick={() => handleScore("10,19,60,69")}
+              className={score == "10,19,60,69" ? "selected" : ""}
+            >
+              10-19 | 60-69
+            </button>
+            <button
+              onClick={() => handleScore("10,19,70,79")}
+              className={score == "10,19,70,79" ? "selected" : ""}
+            >
+              10-19 | 70-79
+            </button>
+            <button
+              onClick={() => handleScore("10,19,80,89")}
+              className={score == "10,19,80,89" ? "selected" : ""}
+            >
+              10-19 | 80-89
+            </button>
+            <button
+              onClick={() => handleScore("10,19,90,99")}
+              className={score == "10,19,90,99" ? "selected" : ""}
+            >
+              10-19 | 90-99
+            </button>
+            <button
+              onClick={() => handleScore("10,19,100,150")}
+              className={score == "10,19,100,150" ? "selected" : ""}
+            >
+              10-19 | 100-150
+            </button>
+          </div>
+          {/* Consdition 20 to 29 */}
+          <div className="card">
+            <button
+              onClick={() => handleScore("10,19,20,29")}
+              className={score == "10,19,20,29" ? "selected" : ""}
+            >
+              20-29 | 20-29
+            </button>
+            <button
+              onClick={() => handleScore("10,19,30,39")}
+              className={score == "10,19,30,39" ? "selected" : ""}
+            >
+              20-29 | 30-39
+            </button>
+            <button
+              onClick={() => handleScore("10,19,40,49")}
+              className={score == "10,19,40,49" ? "selected" : ""}
+            >
+              20-29 | 40-49
+            </button>
+            <button
+              onClick={() => handleScore("10,19,50,59")}
+              className={score == "10,19,50,59" ? "selected" : ""}
+            >
+              20-29 | 50-59
+            </button>
+            <button
+              onClick={() => handleScore("10,19,60,69")}
+              className={score == "10,19,60,69" ? "selected" : ""}
+            >
+              20-29 | 60-69
+            </button>
+            <button
+              onClick={() => handleScore("10,19,70,79")}
+              className={score == "10,19,70,79" ? "selected" : ""}
+            >
+              20-29 | 70-79
+            </button>
+            <button
+              onClick={() => handleScore("10,19,80,89")}
+              className={score == "10,19,80,89" ? "selected" : ""}
+            >
+              20-29 | 80-89
+            </button>
+            <button
+              onClick={() => handleScore("10,19,90,99")}
+              className={score == "10,19,90,99" ? "selected" : ""}
+            >
+              20-29 | 90-99
+            </button>
+            <button
+              onClick={() => handleScore("10,19,100,150")}
+              className={score == "10,19,100,150" ? "selected" : ""}
+            >
+              20-29 | 100-150
+            </button>
+          </div>
+          {/* 30 t0 40  */}
+          <div className="card">
+            <button
+              onClick={() => handleScore("10,19,30,39")}
+              className={score == "10,19,30,39" ? "selected" : ""}
+            >
+              30-39 | 30-39
+            </button>
+            <button
+              onClick={() => handleScore("10,19,40,49")}
+              className={score == "10,19,40,49" ? "selected" : ""}
+            >
+              30-39 | 40-49
+            </button>
+            <button
+              onClick={() => handleScore("10,19,50,59")}
+              className={score == "10,19,50,59" ? "selected" : ""}
+            >
+              30-39 | 50-59
+            </button>
+            <button
+              onClick={() => handleScore("10,19,60,69")}
+              className={score == "10,19,60,69" ? "selected" : ""}
+            >
+              30-39 | 60-69
+            </button>
+            <button
+              onClick={() => handleScore("10,19,70,79")}
+              className={score == "10,19,70,79" ? "selected" : ""}
+            >
+              30-39 | 70-79
+            </button>{" "}
+            <button
+              onClick={() => handleScore("10,19,80,89")}
+              className={score == "10,19,80,89" ? "selected" : ""}
+            >
+              30-39 | 80-89
+            </button>
+            <button
+              onClick={() => handleScore("10,19,80,89")}
+              className={score == "10,19,80,89" ? "selected" : ""}
+            >
+              30-39 | 90-99
+            </button>
+            <button
+              onClick={() => handleScore("10,19,100,150")}
+              className={score == "10,19,100,150" ? "selected" : ""}
+            >
+              30-39 | 100-150
+            </button>
+          </div>
         </div>
       </div>
       <div className="main">
