@@ -260,6 +260,7 @@ const Layout = () => {
           className={run === false ? "game selected" : "game"}
         >
           <div className="card">
+            <h2>0 | Upto 150</h2>
             <button
               onClick={() => handleScore("0,0,0,0")}
               className={score == "0,0,0,0" ? "selected" : ""}
@@ -335,6 +336,7 @@ const Layout = () => {
           </div>
           {/* 1 to 9 someting */}
           <div className="card">
+            <h2>1 - 9 | Upto 150</h2>
             <button
               onClick={() => handleScore("1,9,1,9")}
               className={score == "1,9,1,9" ? "selected" : ""}
@@ -404,6 +406,7 @@ const Layout = () => {
           </div>
           {/* 10 to someting */}
           <div className="card">
+            <h2>10 - 19 | Upto 150</h2>
             <button
               onClick={() => handleScore("10,19,10,19")}
               className={score == "10,19,10,19" ? "selected" : ""}
@@ -467,6 +470,7 @@ const Layout = () => {
           </div>
           {/* Consdition 20 to 29 */}
           <div className="card">
+            <h2>20 - 29 | Upto 150</h2>
             <button
               onClick={() => handleScore("10,19,20,29")}
               className={score == "10,19,20,29" ? "selected" : ""}
@@ -524,6 +528,7 @@ const Layout = () => {
           </div>
           {/* 30 t0 40  */}
           <div className="card">
+            <h2>30 - 39 | Upto 150</h2>
             <button
               onClick={() => handleScore("10,19,30,39")}
               className={score == "10,19,30,39" ? "selected" : ""}
