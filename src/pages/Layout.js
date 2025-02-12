@@ -248,17 +248,17 @@ const Layout = () => {
           </button>
         </div>
       </div>{" "}
-      <div className={run === false ? "gameBlock selected" : "gameBlock"}>
+      <div className="gameBlock">
         <div className="buttonSection">
-          <button
-            className={run === true ? "run selected" : "run"}
-            onClick={handleRun}
-          >
+          <button className="run" onClick={handleRun}>
             {run ? <Run /> : <Back />}
           </button>
         </div>
 
-        <div className="game">
+        <div
+          className="game"
+          className={run === false ? "game selected" : "game"}
+        >
           <div className="card">
             <button
               onClick={() => handleScore("0,0,0,0")}
