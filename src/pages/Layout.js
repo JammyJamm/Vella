@@ -3,6 +3,8 @@ import "./style.css";
 import { useEffect, useState } from "react";
 import { collection, getDocs, query } from "firebase/firestore";
 import db from "./FirbaseConfig";
+import { ReactComponent as Run } from "../assets/images/run.svg";
+import { ReactComponent as Back } from "../assets/images/close.svg";
 const Layout = () => {
   const [data, setData] = useState([]);
   const [player, setPlayer] = useState("Player,Player");
@@ -53,14 +55,18 @@ const Layout = () => {
   // Handle Score
   const handleScore = (prop) => {
     setScore(prop);
+    handleRun();
   };
   const handlePlayer = (prop) => {
     setPlayer(prop);
   };
+  const [run, setRun] = useState(true);
+  const handleRun = () => {
+    setRun((pre) => !pre);
+  };
   return (
     <div className="layout">
       {/* Nav Bar Starts */}
-
       <div className="ui-topNav ui-match-nav">
         <div className="title">
           {/* <Link to={"/"}>
@@ -98,92 +104,8 @@ const Layout = () => {
               </a>
             </div>
           </div>
-          <div className="gameBlock">
-            <div className="game">
-              <button
-                onClick={() => handleScore("0,0,0,0")}
-                className={score == "0,0,0,0" ? "selected" : ""}
-              >
-                0-0 | 0-0
-              </button>
-              <button
-                onClick={() => handleScore("0,0,1,9")}
-                className={score == "0,0,1,9" ? "selected" : ""}
-              >
-                0-0 | 1-9
-              </button>
-              <button
-                onClick={() => handleScore("0,0,10,19")}
-                className={score == "0,0,10,19" ? "selected" : ""}
-              >
-                0-0 | 10-19
-              </button>
-              <button
-                onClick={() => handleScore("0,0,20,29")}
-                className={score == "0,0,20,29" ? "selected" : ""}
-              >
-                0-0 | 20-29
-              </button>
-              <button
-                onClick={() => handleScore("0,0,30,39")}
-                className={score == "0,0,30,39" ? "selected" : ""}
-              >
-                0-0 | 30-39
-              </button>
-              <button
-                onClick={() => handleScore("0,0,40,49")}
-                className={score == "0,0,40,49" ? "selected" : ""}
-              >
-                0-0 | 40-49
-              </button>
-              <button
-                onClick={() => handleScore("0,0,50,59")}
-                className={score == "0,0,50,59" ? "selected" : ""}
-              >
-                0-0 | 50-59
-              </button>
-
-              {/* 1 to someting */}
-              <button value="11" className="">
-                1,1-9
-              </button>
-              <button value="110" className="">
-                1,10-20
-              </button>
-              <button value="120" className="">
-                1,20-30
-              </button>
-              <button value="130" className="">
-                1,30-40
-              </button>
-              <button value="140" className="">
-                1,40-50
-              </button>
-              <button value="150" className="">
-                1,Above 50
-              </button>
-              {/* 10 to someting */}
-
-              <button value="1010" className="">
-                10,10-20
-              </button>
-              <button value="1020" className="">
-                10,20-30
-              </button>
-              <button value="1030" className="">
-                10,30-40
-              </button>
-              <button value="1040" className="">
-                10,40-50
-              </button>
-              <button value="1050" className="">
-                10,Above 50
-              </button>
-            </div>
-          </div>
         </div>
       </div>
-
       <div className="ui-nav">
         <div className="ui-block">
           <button
@@ -252,6 +174,9 @@ const Layout = () => {
               ></path>
             </svg>
             <span>Keeper</span>
+          </button>
+          <button className="run" onClick={handleRun}>
+            {run ? <Run /> : <Back />}
           </button>
           <button
             className={player == "Player,Captain" ? "selected" : ""}
@@ -322,12 +247,104 @@ const Layout = () => {
             <span>Cap/Wk</span>
           </button>
         </div>
+      </div>{" "}
+      <div className={run === false ? "gameBlock selected" : "gameBlock"}>
+        <div className="buttonSection">
+          <button
+            className={run === true ? "run selected" : "run"}
+            onClick={handleRun}
+          >
+            {run ? <Run /> : <Back />}
+          </button>
+        </div>
+
+        <div className="game">
+          <button
+            onClick={() => handleScore("0,0,0,0")}
+            className={score == "0,0,0,0" ? "selected" : ""}
+          >
+            0-0 | 0-0
+          </button>
+          <button
+            onClick={() => handleScore("0,0,1,9")}
+            className={score == "0,0,1,9" ? "selected" : ""}
+          >
+            0-0 | 1-9
+          </button>
+          <button
+            onClick={() => handleScore("0,0,10,19")}
+            className={score == "0,0,10,19" ? "selected" : ""}
+          >
+            0-0 | 10-19
+          </button>
+          <button
+            onClick={() => handleScore("0,0,20,29")}
+            className={score == "0,0,20,29" ? "selected" : ""}
+          >
+            0-0 | 20-29
+          </button>
+          <button
+            onClick={() => handleScore("0,0,30,39")}
+            className={score == "0,0,30,39" ? "selected" : ""}
+          >
+            0-0 | 30-39
+          </button>
+          <button
+            onClick={() => handleScore("0,0,40,49")}
+            className={score == "0,0,40,49" ? "selected" : ""}
+          >
+            0-0 | 40-49
+          </button>
+          <button
+            onClick={() => handleScore("0,0,50,59")}
+            className={score == "0,0,50,59" ? "selected" : ""}
+          >
+            0-0 | 50-59
+          </button>
+
+          {/* 1 to someting */}
+          <button value="11" className="">
+            1,1-9
+          </button>
+          <button value="110" className="">
+            1,10-20
+          </button>
+          <button value="120" className="">
+            1,20-30
+          </button>
+          <button value="130" className="">
+            1,30-40
+          </button>
+          <button value="140" className="">
+            1,40-50
+          </button>
+          <button value="150" className="">
+            1,Above 50
+          </button>
+          {/* 10 to someting */}
+
+          <button value="1010" className="">
+            10,10-20
+          </button>
+          <button value="1020" className="">
+            10,20-30
+          </button>
+          <button value="1030" className="">
+            10,30-40
+          </button>
+          <button value="1040" className="">
+            10,40-50
+          </button>
+          <button value="1050" className="">
+            10,Above 50
+          </button>
+        </div>
       </div>
       <div className="main">
         <div
           className="main-content"
           style={{
-            marginTop: "60px",
+            marginTop: "24px",
             display: "flex",
             flexDirection: "column",
           }}
