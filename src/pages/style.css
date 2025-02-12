@@ -32,7 +32,7 @@ button.run {
 }
 .gameBlock .game {
   height: 0vh;
-  padding: 0px 6px;
+  padding: 0px 12px;
   display: flex;
   flex-wrap: wrap;
   justify-content: stretch;
@@ -55,7 +55,7 @@ button.run {
   display: block;
   position: absolute;
   top: 0px;
-  width: 100%;
+  width: 91%;
   height: 16px;
   background-color: #eee;
 }
