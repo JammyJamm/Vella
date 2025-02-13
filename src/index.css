@@ -207,19 +207,20 @@ table tbody tr.loss {
   left: 0px;
 }
 .ui-nav .ui-block {
-  /* border-radius: 50px; */
+  border-radius: 26px 26px 0px 0px;
   display: flex;
   justify-content: space-around;
   /* background-color: #495057; */
   background-color: #fff;
-  border-top: 1px solid #dddddd;
-  padding: 10px 16px 16px 16px;
-  box-shadow: 0px 1px 1px -1px rgba(0, 0, 0, 0.2),
+  /* border-top: 1px solid #dddddd; */
+  padding: 16px 16px 22px 16px;
+  box-shadow: 1px 1px 10px -1px rgba(0, 0, 0, 0.2),
     0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 1px 0px rgba(0, 0, 0, 0.12);
 }
+
 .ui-nav button {
-  width: 26px;
-  height: 26px;
+  width: 30px;
+  height: 30px;
   /* text-align: center; */
   display: flex;
   justify-content: center;
@@ -245,12 +246,18 @@ table tbody tr.loss {
 .ui-nav button.selected {
   color: rgb(255, 0, 0);
 }
+.ui-nav button svg {
+  height: 30px;
+}
 .ui-nav button.selected svg path {
   fill: rgb(255, 0, 0);
 }
+.ui-nav button svg path {
+  fill: rgb(196, 196, 196) !important;
+}
 .ui-nav button span {
   position: absolute;
-  top: 24px;
+  top: 32px;
   font-size: 10px;
   font-weight: 500;
   color: gray;
@@ -263,17 +270,20 @@ table tbody tr.loss {
   border-radius: 0px 0px 50px 50px;
   background-color: red;
   position: absolute;
-  top: -10px;
+  top: -16px;
 }
 .ui-nav button img {
   width: 70px;
 }
 .ui-topNav {
   width: 100%;
+  height: 56px;
   position: fixed;
   top: 0px;
   left: 0px;
   z-index: 9;
+  display: flex;
+  justify-content: center;
 
   background-size: 101% auto;
   color: #fff;
@@ -285,7 +295,7 @@ table tbody tr.loss {
   justify-content: space-between;
 }
 .ui-topNav .profile img {
-  width: 140px;
+  width: 166px;
 }
 .ui-topNav .more {
   display: flex;
@@ -294,7 +304,7 @@ table tbody tr.loss {
   font-size: 16px;
 }
 .ui-topNav .more img {
-  width: 15px;
+  width: 20px;
   margin-left: 16px;
 }
 .ui-topNav .gameBlock {
@@ -326,6 +336,7 @@ table tbody tr.loss {
   color: #b03a2e;
   font-weight: 400;
   box-shadow: none;
+  border-radius: 6px;
 }
 .ui-note .note {
   display: flex;
@@ -636,7 +647,9 @@ table tbody tr.loss {
   display: flex;
   flex-wrap: wrap;
   text-align: center;
+  justify-content: center;
 }
+
 .main-card .card .middle .result label {
   width: 100%;
   display: block;
