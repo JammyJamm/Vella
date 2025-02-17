@@ -250,7 +250,7 @@ table tbody tr.loss {
   height: 30px;
 }
 .ui-nav button.selected svg path {
-  fill: rgb(255, 0, 0);
+  fill: rgb(255, 0, 0) !important;
 }
 .ui-nav button svg path {
   fill: rgb(196, 196, 196) !important;

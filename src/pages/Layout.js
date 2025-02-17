@@ -41,14 +41,30 @@ const Layout = () => {
     setFilterData(
       data?.filter((item) => {
         return (
-          parseInt(item.player1Score) >= arrScore1 &&
-          parseInt(item.player1Score) <= arrScore2 &&
-          parseInt(item.player2Score) >= arrScore3 &&
-          parseInt(item.player2Score) <= arrScore4 &&
-          ((item.player1Role.toUpperCase() == player1 &&
+          (parseInt(item.player1Score) >= arrScore1 &&
+            parseInt(item.player1Score) <= arrScore2 &&
+            parseInt(item.player2Score) >= arrScore3 &&
+            parseInt(item.player2Score) <= arrScore4 &&
+            item.player1Role.toUpperCase() == player1 &&
             item.player2Role.toUpperCase() == player2) ||
-            (item.player1Role.toUpperCase() == player2 &&
-              item.player2Role.toUpperCase() == player1))
+          (item.player1Role.toUpperCase() == player2 &&
+            item.player2Role.toUpperCase() == player1 &&
+            parseInt(item.player1Score) >= arrScore1 &&
+            parseInt(item.player1Score) <= arrScore2 &&
+            parseInt(item.player2Score) >= arrScore3 &&
+            parseInt(item.player2Score) <= arrScore4) ||
+          (parseInt(item.player2Score) >= arrScore1 &&
+            parseInt(item.player2Score) <= arrScore2 &&
+            parseInt(item.player1Score) >= arrScore3 &&
+            parseInt(item.player1Score) <= arrScore4 &&
+            item.player1Role.toUpperCase() == player1 &&
+            item.player2Role.toUpperCase() == player2) ||
+          (item.player1Role.toUpperCase() == player2 &&
+            item.player2Role.toUpperCase() == player1 &&
+            parseInt(item.player2Score) >= arrScore1 &&
+            parseInt(item.player2Score) <= arrScore2 &&
+            parseInt(item.player1Score) >= arrScore3 &&
+            parseInt(item.player1Score) <= arrScore4)
         );
       })
     );
@@ -108,8 +124,8 @@ const Layout = () => {
       <div className="ui-nav">
         <div className="ui-block">
           <button
-            className={player == "Player,Player" ? "selected" : ""}
-            onClick={() => handlePlayer("Player,Player")}
+            className={player == "PLAYER,PLAYER" ? "selected" : ""}
+            onClick={() => handlePlayer("PLAYER,PLAYER")}
           >
             <svg
               width="512"
@@ -153,8 +169,8 @@ const Layout = () => {
             <span>Player</span>
           </button>
           <button
-            className={player == "Player,Wk" ? "selected" : ""}
-            onClick={() => handlePlayer("Player,Wk")}
+            className={player == "PLAYER,WK" ? "selected" : ""}
+            onClick={() => handlePlayer("PLAYER,WK")}
           >
             <Keeper />
             <span>Keeper</span>
@@ -167,15 +183,15 @@ const Layout = () => {
             {run ? <Run /> : <Back />}
           </button>
           <button
-            className={player == "Player,Captain" ? "selected" : ""}
-            onClick={() => handlePlayer("Player,Captain")}
+            className={player == "PLAYER,CAPTAIN" ? "selected" : ""}
+            onClick={() => handlePlayer("PLAYER,CAPTAIN")}
           >
             <Captain />
             <span>Captain</span>
           </button>
           <button
-            className={player == "Wk,Captain" ? "selected" : ""}
-            onClick={() => handlePlayer("Wk,Captain")}
+            className={player == "WK,CAPTAIN" ? "selected" : ""}
+            onClick={() => handlePlayer("WK,CAPTAIN")}
           >
             <svg
               width="513"
@@ -557,12 +573,13 @@ const Layout = () => {
             <div className="note" style={{ width: "100%" }}>
               <i>
                 <b>
-                  <i>GIT </i>
+                  <i>{player} </i>
                 </b>
               </i>
-              ₹130,000
+
               <span>
-                1<sup>No</sup> (0,23) - 2<sup>Yes</sup> (24,43)
+                {/* 1<sup>No</sup> (0,23) - 2<sup>Yes</sup> (24,43) */}
+                {score}
               </span>
             </div>
           </div>
