@@ -125,7 +125,7 @@ const addData = () => {
                     className="form-control"
                     name="league"
                     required
-                    value={"BPL_W"}
+                    // value={"BPL_W"}
                     onChange={handleChange}
                   />
                 </div>
