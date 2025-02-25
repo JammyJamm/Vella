@@ -7,6 +7,7 @@ import { ReactComponent as Run } from "../assets/images/run.svg";
 import { ReactComponent as Back } from "../assets/images/close.svg";
 import { ReactComponent as Captain } from "../assets/images/crown.svg";
 import { ReactComponent as Keeper } from "../assets/images/keeper.svg";
+import logoImage from "../assets/images/logo_senthamil.png";
 const Layout = () => {
   const [data, setData] = useState([]);
   const [player, setPlayer] = useState("PLAYER,PLAYER");
@@ -106,10 +107,7 @@ const Layout = () => {
             <div className="profile">
               <div className="image">
                 <Link to={"/"}>
-                  <img
-                    src="https://github.com/JammyJamm/JSON_Data/blob/main/logo_senthamil.png?raw=true"
-                    alt="logo"
-                  />
+                  <img src={logoImage} alt="logo" />
                 </Link>
               </div>
             </div>
