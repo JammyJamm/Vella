@@ -9,7 +9,7 @@ import { ReactComponent as Captain } from "../assets/images/crown.svg";
 import { ReactComponent as Keeper } from "../assets/images/keeper.svg";
 const Layout = () => {
   const [data, setData] = useState([]);
-  const [player, setPlayer] = useState("Player,Player");
+  const [player, setPlayer] = useState("PLAYER,PLAYER");
   const [score, setScore] = useState("0,0,0,0");
   const [filterData, setFilterData] = useState([]);
 
@@ -449,56 +449,56 @@ const Layout = () => {
           <div className="card">
             <h2>20 - 29 | Upto 150</h2>
             <button
-              onClick={() => handleScore("10,19,20,29")}
-              className={score == "10,19,20,29" ? "selected" : ""}
+              onClick={() => handleScore("20,29,20,29")}
+              className={score == "20,29,20,29" ? "selected" : ""}
             >
               20-29 | 20-29
             </button>
             <button
-              onClick={() => handleScore("10,19,30,39")}
-              className={score == "10,19,30,39" ? "selected" : ""}
+              onClick={() => handleScore("20,29,30,39")}
+              className={score == "20,29,30,39" ? "selected" : ""}
             >
               20-29 | 30-39
             </button>
             <button
-              onClick={() => handleScore("10,19,40,49")}
-              className={score == "10,19,40,49" ? "selected" : ""}
+              onClick={() => handleScore("20,29,40,49")}
+              className={score == "20,29,40,49" ? "selected" : ""}
             >
               20-29 | 40-49
             </button>
             <button
-              onClick={() => handleScore("10,19,50,59")}
-              className={score == "10,19,50,59" ? "selected" : ""}
+              onClick={() => handleScore("20,29,50,59")}
+              className={score == "20,29,50,59" ? "selected" : ""}
             >
               20-29 | 50-59
             </button>
             <button
-              onClick={() => handleScore("10,19,60,69")}
-              className={score == "10,19,60,69" ? "selected" : ""}
+              onClick={() => handleScore("20,29,60,69")}
+              className={score == "20,29,60,69" ? "selected" : ""}
             >
               20-29 | 60-69
             </button>
             <button
-              onClick={() => handleScore("10,19,70,79")}
-              className={score == "10,19,70,79" ? "selected" : ""}
+              onClick={() => handleScore("20,29,70,79")}
+              className={score == "20,29,70,79" ? "selected" : ""}
             >
               20-29 | 70-79
             </button>
             <button
-              onClick={() => handleScore("10,19,80,89")}
-              className={score == "10,19,80,89" ? "selected" : ""}
+              onClick={() => handleScore("20,29,80,89")}
+              className={score == "20,29,80,89" ? "selected" : ""}
             >
               20-29 | 80-89
             </button>
             <button
-              onClick={() => handleScore("10,19,90,99")}
-              className={score == "10,19,90,99" ? "selected" : ""}
+              onClick={() => handleScore("20,29,90,99")}
+              className={score == "20,29,90,99" ? "selected" : ""}
             >
               20-29 | 90-99
             </button>
             <button
-              onClick={() => handleScore("10,19,100,150")}
-              className={score == "10,19,100,150" ? "selected" : ""}
+              onClick={() => handleScore("20,29,100,150")}
+              className={score == "20,29,100,150" ? "selected" : ""}
             >
               20-29 | 100-150
             </button>
@@ -507,52 +507,97 @@ const Layout = () => {
           <div className="card">
             <h2>30 - 39 | Upto 150</h2>
             <button
-              onClick={() => handleScore("10,19,30,39")}
-              className={score == "10,19,30,39" ? "selected" : ""}
+              onClick={() => handleScore("30,39,30,39")}
+              className={score == "30,39,30,39" ? "selected" : ""}
             >
               30-39 | 30-39
             </button>
             <button
-              onClick={() => handleScore("10,19,40,49")}
-              className={score == "10,19,40,49" ? "selected" : ""}
+              onClick={() => handleScore("30,39,40,49")}
+              className={score == "30,39,40,49" ? "selected" : ""}
             >
               30-39 | 40-49
             </button>
             <button
-              onClick={() => handleScore("10,19,50,59")}
-              className={score == "10,19,50,59" ? "selected" : ""}
+              onClick={() => handleScore("30,39,50,59")}
+              className={score == "30,39,50,59" ? "selected" : ""}
             >
               30-39 | 50-59
             </button>
             <button
-              onClick={() => handleScore("10,19,60,69")}
-              className={score == "10,19,60,69" ? "selected" : ""}
+              onClick={() => handleScore("30,39,60,69")}
+              className={score == "30,39,60,69" ? "selected" : ""}
             >
               30-39 | 60-69
             </button>
             <button
-              onClick={() => handleScore("10,19,70,79")}
-              className={score == "10,19,70,79" ? "selected" : ""}
+              onClick={() => handleScore("30,39,70,79")}
+              className={score == "30,39,70,79" ? "selected" : ""}
             >
               30-39 | 70-79
             </button>{" "}
             <button
-              onClick={() => handleScore("10,19,80,89")}
-              className={score == "10,19,80,89" ? "selected" : ""}
+              onClick={() => handleScore("30,39,80,89")}
+              className={score == "30,39,80,89" ? "selected" : ""}
             >
               30-39 | 80-89
             </button>
             <button
-              onClick={() => handleScore("10,19,80,89")}
-              className={score == "10,19,80,89" ? "selected" : ""}
+              onClick={() => handleScore("30,39,90,99")}
+              className={score == "30,39,90,99" ? "selected" : ""}
             >
               30-39 | 90-99
             </button>
             <button
-              onClick={() => handleScore("10,19,100,150")}
-              className={score == "10,19,100,150" ? "selected" : ""}
+              onClick={() => handleScore("30,39,100,150")}
+              className={score == "30,39,100,150" ? "selected" : ""}
             >
               30-39 | 100-150
+            </button>
+          </div>
+          <div className="card">
+            <h2>30 - 39 | Upto 150</h2>
+            <button
+              onClick={() => handleScore("40,49,40,49")}
+              className={score == "40,49,40,49" ? "selected" : ""}
+            >
+              40-49 | 40-49
+            </button>
+            <button
+              onClick={() => handleScore("40,49,50,59")}
+              className={score == "40,49,50,59" ? "selected" : ""}
+            >
+              40-49 | 50-59
+            </button>
+            <button
+              onClick={() => handleScore("40,49,60,69")}
+              className={score == "40,49,60,69" ? "selected" : ""}
+            >
+              40-49 | 60-69
+            </button>
+            <button
+              onClick={() => handleScore("40,49,70,79")}
+              className={score == "40,49,70,79" ? "selected" : ""}
+            >
+              40-49 | 70-79
+            </button>
+            <button
+              onClick={() => handleScore("40,49,80,89")}
+              className={score == "40,49,80,89" ? "selected" : ""}
+            >
+              40-49 | 80-89
+            </button>
+            <button
+              onClick={() => handleScore("40,49,90,99")}
+              className={score == "40,49,90,99" ? "selected" : ""}
+            >
+              40-49 | 90-99
+            </button>
+            <button
+              onClick={() => handleScore("40,49,100,150")}
+              className={score == "40,49,100,150" ? "selected" : ""}
+            >
+              40-49 | 100-150
             </button>
           </div>
         </div>
