@@ -22,13 +22,15 @@ function App() {
       {isLoading ? (
         <Loading /> // Show loading screen if isLoading is true
       ) : (
-        <div className="App">
-          <Routes>
-            <Route path="/" element={<Layout />} />
-            <Route path="/add" element={<AddData />} />
-          </Routes>
-        </div>
+        ""
       )}
+
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Layout />} />
+          <Route path="/add" element={<AddData />} />
+        </Routes>
+      </div>
     </div>
   );
 }

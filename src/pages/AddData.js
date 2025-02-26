@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { collection, addDoc } from "firebase/firestore";
 import db from "./FirbaseConfig";
 import back from "../assets/images/back.svg";
 import background from "../assets/images/Background.png";
 import { Link } from "react-router-dom";
-const addData = () => {
+const AddData = () => {
   // const colRef = collection(db, "player");
+  const [IsSucess, setIsSucess] = useState(false);
   const handleLadduAddMatch = (e) => {
     e.preventDefault();
+
     const addForm = document.querySelector("#addLadduData");
 
     const colRef = collection(db, "Laddu");
@@ -22,7 +24,10 @@ const addData = () => {
       result: addForm.result.value,
     })
       .then((response) => {
-        alert("Added");
+        setIsSucess(false);
+        setTimeout(() => {
+          setIsSucess(true);
+        }, [3000]);
       })
       .catch((error) => {
         console.log(error.message);
@@ -31,6 +36,7 @@ const addData = () => {
   const handleChange = (e) => {
     return e.target.value;
   };
+
   return (
     <div className="ui-addLadduMatch" id="addWapper">
       <div className="cover" style={{ backgroundImage: `url(${background})` }}>
@@ -151,7 +157,12 @@ const addData = () => {
           </div>
         </div>
       </div>
+      <div className={IsSucess == true ? "sucessBlock" : "sucessBlock off"}>
+        <div className="sucess">
+          <p>Sucessfully added !</p>
+        </div>
+      </div>
     </div>
   );
 };
-export default addData;
+export default AddData;

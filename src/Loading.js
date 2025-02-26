@@ -7,11 +7,13 @@ const Loading = () => {
     setLoad("loading loaded");
   }, 4000);
   return (
-    <div className={load}>
-      <div className="imgBlock">
-        <img src={logo} alt="logo" />
+    <>
+      <div className={load}>
+        <div className="imgBlock">
+          <img src={logo} alt="logo" />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 export default Loading;
