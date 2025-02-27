@@ -157,7 +157,7 @@ const AddData = () => {
           </div>
         </div>
       </div>
-      <div className={IsSucess == true ? "sucessBlock" : "sucessBlock off"}>
+      <div className={IsSucess === true ? "sucessBlock" : "sucessBlock off"}>
         <div className="sucess">
           <p>Sucessfully added !</p>
         </div>

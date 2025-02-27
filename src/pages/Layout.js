@@ -79,8 +79,13 @@ const Layout = () => {
     setPlayer(prop);
   };
   const [run, setRun] = useState(true);
+  const [animationbottom, setAnimateBottom] = useState(false);
   const handleRun = () => {
     setRun((pre) => !pre);
+    setAnimateBottom(true);
+    setTimeout(() => {
+      setAnimateBottom(false);
+    }, 6000);
   };
   return (
     <div className="layout">
@@ -223,18 +228,15 @@ const Layout = () => {
           </button>
         </div>
       </div>{" "}
-      <div className="gameBlock">
+      <div className={animationbottom ? "gameBlock on" : "gameBlock"}>
         <div className="buttonSection">
           <button className="run" onClick={handleRun}>
             {run ? <Run /> : <Back />}
           </button>
         </div>
 
-        <div
-          className="game"
-          className={run === false ? "game selected" : "game"}
-        >
-          <div className="card">
+        <div className={run === false ? "game selected" : "game"}>
+          <div className="card" style={{ animationDelay: "0s" }}>
             <h2>0 | Upto 150</h2>
             <button
               onClick={() => handleScore("0,0,0,0")}
@@ -310,7 +312,7 @@ const Layout = () => {
             </button>
           </div>
           {/* 1 to 9 someting */}
-          <div className="card">
+          <div className="card" style={{ animationDelay: "0.5s" }}>
             <h2>1 - 9 | Upto 150</h2>
             <button
               onClick={() => handleScore("1,9,1,9")}
@@ -380,7 +382,7 @@ const Layout = () => {
             </button>
           </div>
           {/* 10 to someting */}
-          <div className="card">
+          <div className="card" style={{ animationDelay: "1s" }}>
             <h2>10 - 19 | Upto 150</h2>
             <button
               onClick={() => handleScore("10,19,10,19")}
@@ -444,7 +446,7 @@ const Layout = () => {
             </button>
           </div>
           {/* Consdition 20 to 29 */}
-          <div className="card">
+          <div className="card" style={{ animationDelay: "1.5s" }}>
             <h2>20 - 29 | Upto 150</h2>
             <button
               onClick={() => handleScore("20,29,20,29")}
@@ -502,7 +504,7 @@ const Layout = () => {
             </button>
           </div>
           {/* 30 t0 40  */}
-          <div className="card">
+          <div className="card" style={{ animationDelay: "2s" }}>
             <h2>30 - 39 | Upto 150</h2>
             <button
               onClick={() => handleScore("30,39,30,39")}
@@ -553,7 +555,7 @@ const Layout = () => {
               30-39 | 100-150
             </button>
           </div>
-          <div className="card">
+          <div className="card" style={{ animationDelay: "2.5s" }}>
             <h2>30 - 39 | Upto 150</h2>
             <button
               onClick={() => handleScore("40,49,40,49")}
