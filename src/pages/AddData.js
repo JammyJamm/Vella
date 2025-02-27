@@ -6,7 +6,7 @@ import background from "../assets/images/Background.png";
 import { Link } from "react-router-dom";
 const AddData = () => {
   // const colRef = collection(db, "player");
-  const [IsSucess, setIsSucess] = useState(false);
+  const [IsSucess, setIsSucess] = useState(true);
   const handleLadduAddMatch = (e) => {
     e.preventDefault();
 

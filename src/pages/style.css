@@ -48,22 +48,10 @@ button.run {
   padding: 8px 8px;
 }
 .gameBlock.on .game .card {
-  /* animation: move 0.6s alternate linear; */
   transition: all 1s;
   animation: ease-in;
 }
-@keyframes move {
-  0% {
-    /* transform: translateY(100px);
-    opacity: 0; */
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
+
 .gameBlock .game .card h2 {
   color: gray;
   font-size: 12px;
