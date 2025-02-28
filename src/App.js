@@ -12,7 +12,7 @@ function App() {
     const loadApp = () => {
       setTimeout(() => {
         setIsLoading(false); // Hide loading screen after 3 seconds
-      }, 6000); // Simulating loading time (3 seconds)
+      }, 5000); // Simulating loading time (3 seconds)
     };
 
     loadApp();
