@@ -1,25 +1,27 @@
 {
   "files": {
     "main.css": "/Vella/static/css/main.2e38f564.css",
-    "main.js": "/Vella/static/js/main.c74ecc8f.js",
+    "main.js": "/Vella/static/js/main.4a96d55b.js",
     "static/js/488.ba88c2f8.chunk.js": "/Vella/static/js/488.ba88c2f8.chunk.js",
     "static/media/Background.png": "/Vella/static/media/Background.c689ab74dd105dd98e47.png",
     "static/media/NoData.png": "/Vella/static/media/NoData.88bd3cf3c9023c4b0fa4.png",
     "static/media/logo_senthamil.png": "/Vella/static/media/logo_senthamil.c8b7e8bbfb1ea200092f.png",
     "static/media/logo.jpg": "/Vella/static/media/logo.fdc2951e36017042d994.jpg",
-    "static/media/crown.svg": "/Vella/static/media/crown.3f1000f79e59e5df5722e57150e6829a.svg",
-    "static/media/keeper.svg": "/Vella/static/media/keeper.08c5a4679b222439ebd25b5f72c5aa32.svg",
+    "static/media/keeper.svg": "/Vella/static/media/keeper.da9bcaec9beaf851d327744360a726f8.svg",
+    "static/media/player.svg": "/Vella/static/media/player.5e392b095b2e8d5adf576bae3e073ccd.svg",
+    "static/media/CaptainKeeper.svg": "/Vella/static/media/CaptainKeeper.b71348f3a0d7ef19fa46f3b740a66938.svg",
+    "static/media/crown.svg": "/Vella/static/media/crown.56b908c7bcd956f4c4bb32cd5f439de9.svg",
     "static/media/run.svg": "/Vella/static/media/run.d941c25652919ff0a550b1fc69c15548.svg",
     "static/media/close.svg": "/Vella/static/media/close.7d3c42448aa15461121153f8f3ca781d.svg",
     "static/media/logo.svg": "/Vella/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/Vella/index.html",
     "static/media/back.svg": "/Vella/static/media/back.3e378093a758ece35dff534791644cdf.svg",
     "main.2e38f564.css.map": "/Vella/static/css/main.2e38f564.css.map",
-    "main.c74ecc8f.js.map": "/Vella/static/js/main.c74ecc8f.js.map",
+    "main.4a96d55b.js.map": "/Vella/static/js/main.4a96d55b.js.map",
     "488.ba88c2f8.chunk.js.map": "/Vella/static/js/488.ba88c2f8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2e38f564.css",
-    "static/js/main.c74ecc8f.js"
+    "static/js/main.4a96d55b.js"
   ]
 }
