@@ -8,6 +8,7 @@ import { ReactComponent as Back } from "../assets/images/close.svg";
 import { ReactComponent as Captain } from "../assets/images/crown.svg";
 import { ReactComponent as Keeper } from "../assets/images/keeper.svg";
 import logoImage from "../assets/images/logo_senthamil.png";
+import NoData from "./NoData";
 const Layout = () => {
   const [data, setData] = useState([]);
   const [player, setPlayer] = useState("PLAYER,PLAYER");
@@ -694,6 +695,7 @@ const Layout = () => {
             })}
           </div>
         </div>
+        {filterData.length <= 0 ? <NoData /> : ""}
       </div>
     </div>
   );
