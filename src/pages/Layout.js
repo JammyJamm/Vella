@@ -11,6 +11,7 @@ import { ReactComponent as Player } from "../assets/images/player.svg";
 import { ReactComponent as CaptainKeeper } from "../assets/images/CaptainKeeper.svg";
 import logoImage from "../assets/images/logo_senthamil.png";
 import NoData from "./NoData";
+import NoteResult from "./NoteResult";
 const Layout = () => {
   const [data, setData] = useState([]);
   const [player, setPlayer] = useState("PLAYER,PLAYER");
@@ -128,6 +129,19 @@ const Layout = () => {
         </div>
       </div>
       <div className="ui-nav">
+        <div
+          className="ui-block"
+          style={{
+            backgroundColor: "#f1f2f3",
+            position: "relative",
+            top: "14px",
+            padding: "10px 30px 22px 30px",
+            justifyContent: "space-between",
+          }}
+        >
+          <label style={{ color: "#9e9e9e", fontSize: "10px" }}>{player}</label>
+          <label style={{ color: "#9e9e9e", fontSize: "10px" }}>{score}</label>
+        </div>
         <div className="ui-block">
           <button
             className={player == "PLAYER,PLAYER" ? "selected" : ""}
@@ -549,7 +563,7 @@ const Layout = () => {
             flexDirection: "column",
           }}
         >
-          <div
+          {/* <div
             className="card col-12 ui-note"
             style={{ margin: "5px 0px", display: "flex", width: "100%" }}
           >
@@ -561,9 +575,17 @@ const Layout = () => {
               </i>
 
               <span>
-                {/* 1<sup>No</sup> (0,23) - 2<sup>Yes</sup> (24,43) */}
+                1<sup>No</sup> (0,23) - 2<sup>Yes</sup> (24,43) 
                 {score}
               </span>
+            </div>
+          </div> */}
+          <div
+            className="card col-12 ui-note"
+            style={{ margin: "5px 0px", display: "flex", width: "100%" }}
+          >
+            <div className="note" style={{ width: "100%" }}>
+              <NoteResult player={player} score={score} />
             </div>
           </div>
           {/* Main Card Starts */}
@@ -571,6 +593,12 @@ const Layout = () => {
             {filterData?.map((list) => {
               return (
                 <div className="card">
+                  <div className="top">
+                    <label>{list.league}</label>
+                    {/* <label>
+                      <span>{list.league}</span>
+                    </label> */}
+                  </div>
                   <div className="middle">
                     <label style={{ display: "flex", flexDirection: "column" }}>
                       <span>{list.player1Score}</span>
