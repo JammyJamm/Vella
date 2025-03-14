@@ -132,7 +132,7 @@ const Layout = () => {
         <div
           className="ui-block"
           style={{
-            backgroundColor: "#f1f2f3",
+            backgroundColor: "rgb(206, 217, 235, 0.3)",
             position: "relative",
             top: "14px",
             padding: "10px 30px 22px 30px",
