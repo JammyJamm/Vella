@@ -9,6 +9,7 @@ import { ReactComponent as Captain } from "../assets/images/crown.svg";
 import { ReactComponent as Keeper } from "../assets/images/keeper.svg";
 import { ReactComponent as Player } from "../assets/images/player.svg";
 import { ReactComponent as CaptainKeeper } from "../assets/images/CaptainKeeper.svg";
+import LoadingNote from "../assets/images/loading.gif";
 import logoImage from "../assets/images/logo_senthamil.png";
 import NoData from "./NoData";
 import NoteResult from "./NoteResult";
@@ -582,10 +583,22 @@ const Layout = () => {
           </div> */}
           <div
             className="card col-12 ui-note"
-            style={{ margin: "5px 0px", display: "flex", width: "100%" }}
+            style={{
+              margin: "5px 0px",
+              display: "flex",
+              width: "100%",
+              position: "fixed",
+              bottom: "100px",
+              left: "0px",
+            }}
           >
-            <div className="note" style={{ width: "100%" }}>
-              <NoteResult player={player} score={score} />
+            <div className="noteBlock">
+              <div className="note" style={{ width: "100%" }}>
+                <NoteResult player={player} score={score} />
+              </div>
+              <div className="icon">
+                <img src={LoadingNote} alt="loadingNote" />
+              </div>
             </div>
           </div>
           {/* Main Card Starts */}
