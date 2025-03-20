@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/Vella/static/css/main.a305451d.css",
-    "main.js": "/Vella/static/js/main.fe4e5166.js",
+    "main.css": "/Vella/static/css/main.46af5ddf.css",
+    "main.js": "/Vella/static/js/main.18984706.js",
     "static/js/488.ba88c2f8.chunk.js": "/Vella/static/js/488.ba88c2f8.chunk.js",
+    "static/media/loading.gif": "/Vella/static/media/loading.40cd513986d7e4504f6e.gif",
     "static/media/Background.png": "/Vella/static/media/Background.c689ab74dd105dd98e47.png",
     "static/media/NoData.png": "/Vella/static/media/NoData.88bd3cf3c9023c4b0fa4.png",
     "static/media/logo_senthamil.png": "/Vella/static/media/logo_senthamil.c8b7e8bbfb1ea200092f.png",
@@ -16,12 +17,12 @@
     "static/media/logo.svg": "/Vella/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/Vella/index.html",
     "static/media/back.svg": "/Vella/static/media/back.3e378093a758ece35dff534791644cdf.svg",
-    "main.a305451d.css.map": "/Vella/static/css/main.a305451d.css.map",
-    "main.fe4e5166.js.map": "/Vella/static/js/main.fe4e5166.js.map",
+    "main.46af5ddf.css.map": "/Vella/static/css/main.46af5ddf.css.map",
+    "main.18984706.js.map": "/Vella/static/js/main.18984706.js.map",
     "488.ba88c2f8.chunk.js.map": "/Vella/static/js/488.ba88c2f8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a305451d.css",
-    "static/js/main.fe4e5166.js"
+    "static/css/main.46af5ddf.css",
+    "static/js/main.18984706.js"
   ]
 }
