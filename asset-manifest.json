@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Vella/static/css/main.550a3293.css",
-    "main.js": "/Vella/static/js/main.accaef6c.js",
+    "main.css": "/Vella/static/css/main.255ab7ad.css",
+    "main.js": "/Vella/static/js/main.da207142.js",
     "static/js/488.ba88c2f8.chunk.js": "/Vella/static/js/488.ba88c2f8.chunk.js",
     "static/media/loading.gif": "/Vella/static/media/loading.40cd513986d7e4504f6e.gif",
     "static/media/Background.png": "/Vella/static/media/Background.c689ab74dd105dd98e47.png",
@@ -17,12 +17,12 @@
     "static/media/logo.svg": "/Vella/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/Vella/index.html",
     "static/media/back.svg": "/Vella/static/media/back.3e378093a758ece35dff534791644cdf.svg",
-    "main.550a3293.css.map": "/Vella/static/css/main.550a3293.css.map",
-    "main.accaef6c.js.map": "/Vella/static/js/main.accaef6c.js.map",
+    "main.255ab7ad.css.map": "/Vella/static/css/main.255ab7ad.css.map",
+    "main.da207142.js.map": "/Vella/static/js/main.da207142.js.map",
     "488.ba88c2f8.chunk.js.map": "/Vella/static/js/488.ba88c2f8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.550a3293.css",
-    "static/js/main.accaef6c.js"
+    "static/css/main.255ab7ad.css",
+    "static/js/main.da207142.js"
   ]
 }
