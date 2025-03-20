@@ -330,11 +330,12 @@ table tbody tr.loss {
 .ui-note {
   margin-top: 68px;
   border: 1px solid rgb(231, 76, 60, 0.3);
-  background: linear-gradient(
+  /* background: linear-gradient(
     to right,
     rgb(231, 76, 60, 0.2),
     rgb(231, 76, 60, 0.1)
-  );
+  ); */
+  background-color: rgb(2, 31, 52);
   color: #b03a2e;
   font-weight: 400;
   box-shadow: none;
@@ -373,6 +374,7 @@ table tbody tr.loss {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  white-space: nowrap;
 }
 /* .ui-note::after {
   content: "";

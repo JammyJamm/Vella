@@ -587,14 +587,18 @@ const Layout = () => {
               margin: "5px 0px",
               display: "flex",
               width: "100%",
-              position: "fixed",
+              // position: "fixed",
               bottom: "100px",
               left: "0px",
             }}
           >
             <div className="noteBlock">
               <div className="note" style={{ width: "100%" }}>
-                <NoteResult player={player} score={score} />
+                <NoteResult
+                  player={player}
+                  score={score}
+                  dataLength={filterData.length}
+                />
               </div>
               <div className="icon">
                 <img src={LoadingNote} alt="loadingNote" />
