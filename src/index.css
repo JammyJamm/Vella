@@ -356,6 +356,46 @@ table tbody tr.loss {
   top: 0px;
   z-index: -10;
 }
+.typing {
+  /* font-family: "Courier New", Courier, monospace;
+  font-size: 24px;
+  font-weight: bold; */
+  white-space: nowrap; /* Prevents the text from wrapping */
+  overflow: hidden; /* Hides the extra text */
+  border-right: 3px solid black; /* Simulate the cursor */
+  width: 0; /* Initially set width to 0 */
+  animation: typing 4s steps(30) 1s forwards, blink 0.75s step-end infinite;
+}
+
+/* Typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Cursor blink effect */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: black;
+  }
+}
+
+/* Adding the blinking cursor */
+.typing::after {
+  content: "|";
+  display: inline-block;
+  width: 10px;
+  background-color: black;
+  margin-left: 5px;
+  animation: blink 0.75s step-end infinite;
+}
 .ui-note .noteBlock {
   display: flex;
   justify-content: space-evenly;
@@ -365,7 +405,7 @@ table tbody tr.loss {
   padding: 4px 20px;
   color: #fff;
 }
-.ui-note .noteBlock p {
+.ui-note .noteBlock .typing {
   background: radial-gradient(
     circle farthest-corner at center center,
     rgba(255, 94, 247, 1) 17.8%,
@@ -374,9 +414,9 @@ table tbody tr.loss {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  white-space: nowrap;
+  /* white-space: nowrap; */
 }
-/* .ui-note::after {
+/* .ui-note::after { 
   content: "";
   z-index: -1;
   position: absolute;
@@ -406,6 +446,7 @@ table tbody tr.loss {
   /* height: 100%; */
   border-radius: 50px;
   scale: 4;
+  pointer-events: none;
 }
 .game {
   padding: 16px 0px 0px 0px;

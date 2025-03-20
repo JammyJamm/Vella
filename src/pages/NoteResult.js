@@ -113,7 +113,7 @@ const NoteResult = (player) => {
   //   }
   return (
     <div className="note-result">
-      <p>{note}</p>
+      <p className="typing">{note}</p>
     </div>
   );
 };
