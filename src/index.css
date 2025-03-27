@@ -297,7 +297,7 @@ table tbody tr.loss {
   justify-content: space-between;
 }
 .ui-topNav .profile img {
-  width: 166px;
+  width: 66px;
 }
 .ui-topNav .more {
   display: flex;
@@ -329,22 +329,17 @@ table tbody tr.loss {
 }
 .ui-note {
   margin-top: 68px;
-  border: 1px solid rgb(231, 76, 60, 0.3);
-  /* background: linear-gradient(
-    to right,
-    rgb(231, 76, 60, 0.2),
-    rgb(231, 76, 60, 0.1)
-  ); */
-  background-color: rgb(2, 31, 52);
+
+  background: linear-gradient(to right, #96636d, #6f7e9c);
   color: #b03a2e;
   font-weight: 400;
   box-shadow: none;
-
-  border-radius: 100px;
-  padding: 1px;
+  border-radius: 6px;
+  padding: 1.5px;
   overflow: hidden;
+  border-radius: 6px;
 }
-.ui-note::before {
+/* .ui-note::before {
   width: 100%;
   content: "";
   display: block;
@@ -355,20 +350,10 @@ table tbody tr.loss {
   left: 0px;
   top: 0px;
   z-index: -10;
-}
-.typing {
-  /* font-family: "Courier New", Courier, monospace;
-  font-size: 24px;
-  font-weight: bold; */
-  white-space: nowrap; /* Prevents the text from wrapping */
-  overflow: hidden; /* Hides the extra text */
-  border-right: 3px solid black; /* Simulate the cursor */
-  width: 0; /* Initially set width to 0 */
-  animation: typing 4s steps(30) 1s forwards, blink 0.75s step-end infinite;
-}
+} */
 
 /* Typing effect */
-@keyframes typing {
+/* @keyframes typing {
   from {
     width: 0;
   }
@@ -377,7 +362,7 @@ table tbody tr.loss {
   }
 }
 
-/* Cursor blink effect */
+
 @keyframes blink {
   50% {
     border-color: transparent;
@@ -387,7 +372,7 @@ table tbody tr.loss {
   }
 }
 
-/* Adding the blinking cursor */
+
 .typing::after {
   content: "|";
   display: inline-block;
@@ -396,16 +381,17 @@ table tbody tr.loss {
   margin-left: 5px;
   animation: blink 0.75s step-end infinite;
 }
+*/
 .ui-note .noteBlock {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
-  background-color: #000;
-  border-radius: 50px;
-  padding: 4px 20px;
+  background: linear-gradient(to right, #472b31, #151e2c);
+  padding: 10px 20px;
   color: #fff;
+  border-radius: 6px;
 }
-.ui-note .noteBlock .typing {
+/* .ui-note .noteBlock .typing {
   background: radial-gradient(
     circle farthest-corner at center center,
     rgba(255, 94, 247, 1) 17.8%,
@@ -414,8 +400,8 @@ table tbody tr.loss {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  /* white-space: nowrap; */
-}
+  
+} */
 /* .ui-note::after { 
   content: "";
   z-index: -1;

@@ -600,9 +600,6 @@ const Layout = () => {
                   dataLength={filterData.length}
                 />
               </div>
-              <div className="icon">
-                <img src={LoadingNote} alt="loadingNote" />
-              </div>
             </div>
           </div>
           {/* Main Card Starts */}
