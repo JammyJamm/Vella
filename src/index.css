@@ -5,7 +5,12 @@ html {
   box-sizing: border-box;
 }
 html {
-  background-color: #9b2e26;
+  background: linear-gradient(
+    122deg,
+    rgba(198, 42, 48, 1) 0%,
+    rgba(23, 3, 3, 1) 22%,
+    rgba(0, 27, 32, 1) 100%
+  );
 }
 
 body {
@@ -15,7 +20,12 @@ body {
   font-size: 12px !important;
   font-weight: 400; /* Regular weight */
   color: black;
-  background-color: #9b2e26;
+  background: linear-gradient(
+    122deg,
+    rgba(198, 42, 48, 1) 0%,
+    rgba(23, 3, 3, 1) 22%,
+    rgba(0, 27, 32, 1) 100%
+  );
 }
 .main {
   height: 100vh;
