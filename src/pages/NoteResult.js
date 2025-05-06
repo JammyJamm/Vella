@@ -31,10 +31,12 @@ const NoteResult = (player) => {
         case "PLAYER,WK":
           // Min Player score 0
           if (arrScoreMin === 0 && arrScoreMax <= 39)
-            return setNote(" Don't go Captain or WK // No - Player 37");
+            return setNote(
+              "Don't go Captain or WK | Wait until 40 - Bet under 70"
+            );
           if (arrScoreMin === 0 && arrScoreMax >= 39)
             return setNote(
-              "Don't go Captain or WK // Wait 40 & N0 - Player 67"
+              "Don't go Captain or WK | Wait until 40 - Bet under 70"
             );
           // Min Player score Below 37
           if (arrScoreMin <= 37 && arrScoreMax <= 39)
