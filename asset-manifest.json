@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Vella/static/css/main.024d7c9c.css",
-    "main.js": "/Vella/static/js/main.b8fd9909.js",
+    "main.css": "/Vella/static/css/main.85d906c1.css",
+    "main.js": "/Vella/static/js/main.a1ddf423.js",
     "static/js/488.ba88c2f8.chunk.js": "/Vella/static/js/488.ba88c2f8.chunk.js",
     "static/media/loading.gif": "/Vella/static/media/loading.40cd513986d7e4504f6e.gif",
     "static/media/Background.png": "/Vella/static/media/Background.c689ab74dd105dd98e47.png",
@@ -9,6 +9,7 @@
     "static/media/logo_senthamil.png": "/Vella/static/media/logo_senthamil.c664be057d5b7c50b369.png",
     "static/media/logo.jpg": "/Vella/static/media/logo.fdc2951e36017042d994.jpg",
     "static/media/keeper.svg": "/Vella/static/media/keeper.ef8e9979d79e46ae0a1a85d0b7acdca8.svg",
+    "static/media/noteIcon.svg": "/Vella/static/media/noteIcon.6f75b69eac8a5ccb2dd9c43fbcc76071.svg",
     "static/media/player.svg": "/Vella/static/media/player.a1faeea4d9639b008dc0332dc5673f2f.svg",
     "static/media/CaptainKeeper.svg": "/Vella/static/media/CaptainKeeper.99f577af5182c09b65cff31b2128d22d.svg",
     "static/media/crown.svg": "/Vella/static/media/crown.efdafbcdabf151211792164a32bd353d.svg",
@@ -17,12 +18,12 @@
     "static/media/logo.svg": "/Vella/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/Vella/index.html",
     "static/media/back.svg": "/Vella/static/media/back.3e378093a758ece35dff534791644cdf.svg",
-    "main.024d7c9c.css.map": "/Vella/static/css/main.024d7c9c.css.map",
-    "main.b8fd9909.js.map": "/Vella/static/js/main.b8fd9909.js.map",
+    "main.85d906c1.css.map": "/Vella/static/css/main.85d906c1.css.map",
+    "main.a1ddf423.js.map": "/Vella/static/js/main.a1ddf423.js.map",
     "488.ba88c2f8.chunk.js.map": "/Vella/static/js/488.ba88c2f8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.024d7c9c.css",
-    "static/js/main.b8fd9909.js"
+    "static/css/main.85d906c1.css",
+    "static/js/main.a1ddf423.js"
   ]
 }
