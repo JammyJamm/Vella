@@ -115,7 +115,7 @@ const NoteResult = (player) => {
   //   }
   return (
     <div className="note-result">
-      <p className="typing">{note}</p>
+      <p className="typing">{player.sendmessage}</p>
     </div>
   );
 };

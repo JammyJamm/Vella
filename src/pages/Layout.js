@@ -9,10 +9,12 @@ import { ReactComponent as Captain } from "../assets/images/crown.svg";
 import { ReactComponent as Keeper } from "../assets/images/keeper.svg";
 import { ReactComponent as Player } from "../assets/images/player.svg";
 import { ReactComponent as CaptainKeeper } from "../assets/images/CaptainKeeper.svg";
+import { ReactComponent as NoteIcon } from "../assets/images/noteIcon.svg";
 import LoadingNote from "../assets/images/loading.gif";
 import logoImage from "../assets/images/logo_senthamil.png";
 import NoData from "./NoData";
 import NoteResult from "./NoteResult";
+import Prediction from "./Prediction";
 const Layout = () => {
   const [data, setData] = useState([]);
   const [player, setPlayer] = useState("PLAYER,PLAYER");
@@ -92,6 +94,11 @@ const Layout = () => {
       setAnimateBottom(false);
     }, 6000);
   };
+  // Handle Note fro Prediction
+  const [message, setMessage] = useState("");
+  const handleDataFromPrediction = (data) => {
+    setMessage(data);
+  };
   return (
     <div className="layout">
       {/* Nav Bar Starts */}
@@ -113,6 +120,7 @@ const Layout = () => {
               </button>
             </Link>
           </div> */}
+
           <div className="image">
             <div className="profile">
               <div className="image">
@@ -598,6 +606,7 @@ const Layout = () => {
                   player={player}
                   score={score}
                   dataLength={filterData.length}
+                  sendmessage={message}
                 />
               </div>
             </div>
@@ -676,6 +685,11 @@ const Layout = () => {
         </div>
         {filterData.length <= 0 ? <NoData /> : ""}
       </div>
+      <Prediction
+        player={player}
+        score={score}
+        onSendData={handleDataFromPrediction}
+      />
     </div>
   );
 };
