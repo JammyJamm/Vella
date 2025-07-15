@@ -616,12 +616,12 @@ const Layout = () => {
             {filterData?.map((list) => {
               return (
                 <div className="card">
-                  {/* <div className="top">
+                  <div className="top">
                     <label>{list.league}</label>
                     {/* <label>
                       <span>{list.league}</span>
-                    </label> 
-                  </div> */}
+                    </label> */}
+                  </div>
                   <div className="middle">
                     <label style={{ display: "flex", flexDirection: "column" }}>
                       <span>{list.player1Score}</span>
