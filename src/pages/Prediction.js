@@ -32,7 +32,7 @@ const Prediction = (props) => {
   };
   function filterID(data) {
     setPredictionOBJ(
-      data.filter((item) => {
+      data.find((item) => {
         if (
           item.player.includes(props.player) &&
           item.score.includes(props.score)
@@ -40,21 +40,23 @@ const Prediction = (props) => {
           setVal(item.prediction);
           props.onSendData(item.prediction);
           return item.id;
+        } else {
+          return props.onSendData("A rare day off !");
         }
       })
     );
-    console.log(
-      data.filter((item) => {
-        if (
-          item.player.includes(props.player) &&
-          item.score.includes(props.score)
-        ) {
-          setVal(item.prediction);
+    // console.log(
+    //   data.filter((item) => {
+    //     if (
+    //       item.player.includes(props.player) &&
+    //       item.score.includes(props.score)
+    //     ) {
+    //       setVal(item.prediction);
 
-          return item.id;
-        }
-      })
-    );
+    //       return item.id;
+    //     }
+    //   })
+    // );
   }
   useEffect(() => {
     predictionDataFunc();
